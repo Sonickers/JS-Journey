@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Journey - 0</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function getArrays() {
+			const arr1 = [5, 2, 12, 67, 3, 55, 24];
+			console.log(arr1);
+			const arr2 = arr1.map(a => a * 2);
+			console.log(arr2);
+			const arr3 = arr1.sort(function(a, b) {
+				return a - b;
+			});
+			console.log(arr3);
+			const arr4 = arr1.reduce(function(a, b) {
+				return (a + b);
+			});
+			console.log(arr4);
+		}
+		getArrays();		
+	</script>
+</body>
+</html>

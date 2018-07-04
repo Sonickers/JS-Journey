@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Journey - 1 Donut</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+	 crossorigin="anonymous">
+</head>
+
+<body>
+	<button class="rounded mx-auto d-block mt-5 mb-5" id="makeDonut" type="button" onclick="makeDonut()">
+		<img src="https://abs.twimg.com/emoji/v1/72x72/1f369.png">Make doughnut!</button>
+	<ul id="donutsList" class="text-center">
+	</ul>
+	<script type="text/javascript">
+		function makeDonut() {
+			var donutsList = document.getElementById('donutsList');
+			var newDonut = document.createElement('li');
+			var addDonut = document. createTextNode('https://abs.twimg.com/emoji/v1/72x72/1f369.png');
+			newDonut.appendChild(addDonut);
+			donutsList.appendChild(newDonut);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Journey - 0</title>
+</head>
+<body>
+	<div>
+		<h1 id="nameHere"></h1>		
+	</div>
+	<div>
+		<form>
+			<input id="firstNum" type="number" placeholder="First Number">
+			<input id="secNum" type="number" placeholder="Second Number">
+			<button type="button" value="Sum" onclick="calcNums('+')">+</button>
+			<button type="button" value="Sum" onclick="calcNums('-')">-</button>
+			<button type="button" value="Sum" onclick="calcNums('*')">*</button>
+			<button type="button" value="Sum" onclick="calcNums('/')">/</button>
+			<p id="sum"></p>
+		</form>
+	</div>
+
+	<script type="text/javascript">
+
+		function askNameUser() {
+			const nameQue = prompt("What is your name?", "hooman");
+			var userName = document.getElementById("nameHere");
+			if (nameQue != null) {
+				userName.textContent = "Welcome,"+ " " + nameQue + "!";	
+			} else {
+				userName.textContent = "Welcome, hooman!";
+			}
+		}
+
+		function calcNums(operator) {
+			var firstNum = document.getElementById("firstNum").value;
+			var secNum = document.getElementById("secNum").value;
+			var calc = eval(Number(firstNum) + operator + Number(secNum));
+			var sum = document.getElementById("sum");
+			sum.textContent = "= " + calc;
+		}
+		askNameUser();
+
+	</script>
+</body>
+</html>
